@@ -1,6 +1,6 @@
 {
   "name": "beginner",
-  "import": "module", 
+  "type": "module", 
   "version": "1.0.0",
   "description": "CSS, html, javascript",
   "main": "index.js",
