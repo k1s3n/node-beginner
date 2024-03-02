@@ -9,24 +9,33 @@ header a {
     font-size: 20px;
     display: inline-block;
     padding-right: 30px;
+    transition: font-size 0.3s ease;
   }
 
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-    transition: transform 0.5s ease;
+header a:hover {
+    font-size: 25px; /* Ändra textstorleken vid hover */
+  }
+
+header a.active{
+    font-weight: bold; /* Gör texten fet när länken är aktiv */
 }
 
-.box-hover{
-    transform: scale(1.1);
+header a.active:hover{
+    font-size: 20px; /* Gör texten fet när länken är aktiv */
 }
 
 .glass-box {
-    background-color: rgba(255, 255, 255, 0.3); /* Använd rgba() för att skapa genomskinlighet */
+    background-color: rgba(255, 255, 255, 0.123); /* Använd rgba() för att skapa genomskinlighet */
     border-radius: 10px; /* Runda kanter med en radie på 10px */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga för att ge djup */
     padding: 20px; /* Valfri utfyllnad för att ge utrymme till innehåll */
+  }
+
+  .nav-box {
+    background-color: rgba(255, 255, 255, 0.3); /* Använd rgba() för att skapa genomskinlighet */
+    border-radius: 0px; /* Runda kanter med en radie på 10px */
+    padding: 0px; /* Valfri utfyllnad för att ge utrymme till innehåll */
+    justify-content: baseline;
   }
 
   body {
@@ -38,3 +47,6 @@ header a {
     justify-content: center;
     align-items: center;
   }
+
+
+ 
