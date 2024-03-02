@@ -28,3 +28,13 @@ header a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga för att ge djup */
     padding: 20px; /* Valfri utfyllnad för att ge utrymme till innehåll */
   }
+
+  body {
+    background: linear-gradient(to bottom, #f3f3f3, #e0e0e0); /* Använd en mjuk gradient */
+    margin: 0; /* Återställa marginaler för att undvika överflödiga utrymmen */
+    padding: 0; /* Återställa fyllnad för att undvika överflödiga utrymmen */
+    height: 100vh; /* Fylla hela fönstret */
+    display: bottom; /* Gör innehållet centrerat vertikalt och horisontellt */
+    justify-content: center;
+    align-items: center;
+  }
