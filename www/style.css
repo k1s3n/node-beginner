@@ -21,3 +21,10 @@ header a {
 .box-hover{
     transform: scale(1.1);
 }
+
+.glass-box {
+    background-color: rgba(255, 255, 255, 0.3); /* Använd rgba() för att skapa genomskinlighet */
+    border-radius: 10px; /* Runda kanter med en radie på 10px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga för att ge djup */
+    padding: 20px; /* Valfri utfyllnad för att ge utrymme till innehåll */
+  }
