@@ -1,6 +1,5 @@
 // Use Express - a web server module
 import express from 'express';
-
 // The port to run the server on
 const port = 80;
 

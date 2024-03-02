@@ -5,8 +5,19 @@ header,main{
 
 header a {
     text-decoration: none;
-    color: #207e08;
+    color: #000000;
     font-size: 20px;
     display: inline-block;
     padding-right: 30px;
   }
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: transform 0.5s ease;
+}
+
+.box-hover{
+    transform: scale(1.1);
+}
