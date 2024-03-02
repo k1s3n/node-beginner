@@ -1,4 +1,5 @@
 header,main{
+    padding-top: 50px;
     max-width: 800px;
     margin: 0  auto;
 }
@@ -17,25 +18,18 @@ header a:hover {
   }
 
 header a.active{
-    font-weight: bold; /* Gör texten fet när länken är aktiv */
+    font-weight: bold; 
 }
 
 header a.active:hover{
-    font-size: 20px; /* Gör texten fet när länken är aktiv */
+    font-size: 20px; 
 }
 
 .glass-box {
     background-color: rgba(255, 255, 255, 0.123); /* Använd rgba() för att skapa genomskinlighet */
     border-radius: 10px; /* Runda kanter med en radie på 10px */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga för att ge djup */
-    padding: 20px; /* Valfri utfyllnad för att ge utrymme till innehåll */
-  }
-
-  .nav-box {
-    background-color: rgba(255, 255, 255, 0.3); /* Använd rgba() för att skapa genomskinlighet */
-    border-radius: 0px; /* Runda kanter med en radie på 10px */
-    padding: 0px; /* Valfri utfyllnad för att ge utrymme till innehåll */
-    justify-content: baseline;
+    padding: 20px; 
   }
 
   body {
@@ -43,16 +37,8 @@ header a.active:hover{
     margin: 0; /* Återställa marginaler för att undvika överflödiga utrymmen */
     padding: 0; /* Återställa fyllnad för att undvika överflödiga utrymmen */
     height: 100vh; /* Fylla hela fönstret */
-    display: bottom; /* Gör innehållet centrerat vertikalt och horisontellt */
+    display: block; /* Gör innehållet centrerat vertikalt och horisontellt */
     justify-content: center;
     align-items: center;
     font-family: Verdana;
   }
-
-  .container {
-    display: flex;
-    align-items: flex-start;
-}
-.text {
-    width: 10%; /* Justera bredden efter behov */
-}
