@@ -1,6 +1,6 @@
 header,main{
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0  auto;
 }
 
 header a {
@@ -13,7 +13,7 @@ header a {
   }
 
 header a:hover {
-    font-size: 25px; /* Ändra textstorleken vid hover */
+    font-weight: bolder;
   }
 
 header a.active{
@@ -46,7 +46,13 @@ header a.active:hover{
     display: bottom; /* Gör innehållet centrerat vertikalt och horisontellt */
     justify-content: center;
     align-items: center;
+    font-family: Verdana;
   }
 
-
- 
+  .container {
+    display: flex;
+    align-items: flex-start;
+}
+.text {
+    width: 10%; /* Justera bredden efter behov */
+}
