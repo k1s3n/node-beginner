@@ -25,6 +25,10 @@ nav{
   padding-left: 20%;
 }
 
+body p{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 .nav-left {
   display: flex;
