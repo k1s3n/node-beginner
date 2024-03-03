@@ -1,12 +1,17 @@
-header,main{
-    padding-top: 50px;
-    max-width: 800px;
+header{
+  margin-top: 20px;
+  max-width: 70%;
+  margin: 0 auto;
+  height: 50px;
+}
+main{
+    max-width: 70%;
     margin: 0  auto;
 }
 
 header a {
     text-decoration: none;
-    color: #000000;
+    color: #d5d8dc;
     font-size: 20px;
     display: inline-block;
     padding-right: 30px;
@@ -14,31 +19,31 @@ header a {
   }
 
 header a:hover {
-    font-weight: bolder;
+  color: #20cff4;
   }
 
 header a.active{
-    font-weight: bold; 
+    color: #20cff4; 
 }
 
 header a.active:hover{
     font-size: 20px; 
 }
 
+.header-box {
+  background-color: #2c3e50; /* Använd rgba() för att skapa genomskinlighet */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0,0.541); /* Skugga för att ge djup */
+  padding: 20px; 
+}
+
+
 .glass-box {
-    background-color: rgba(255, 255, 255, 0.123); /* Använd rgba() för att skapa genomskinlighet */
-    border-radius: 10px; /* Runda kanter med en radie på 10px */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Skugga för att ge djup */
+    background-color: rgb(255, 255, 255); /* Använd rgba() för att skapa genomskinlighet */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.541); /* Skugga för att ge djup */
     padding: 20px; 
   }
 
-  body {
-    background: linear-gradient(to bottom, #f3f3f3, #e0e0e0); /* Använd en mjuk gradient */
-    margin: 0; /* Återställa marginaler för att undvika överflödiga utrymmen */
-    padding: 0; /* Återställa fyllnad för att undvika överflödiga utrymmen */
-    height: 100vh; /* Fylla hela fönstret */
-    display: block; /* Gör innehållet centrerat vertikalt och horisontellt */
-    justify-content: center;
-    align-items: center;
-    font-family: Verdana;
-  }
