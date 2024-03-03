@@ -26,6 +26,10 @@ header a.active{
     color: #20cff4; 
 }
 
+header{
+  margin-top: 2%;
+}
+
 header a.active:hover{
     font-size: 20px; 
 }
