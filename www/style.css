@@ -29,13 +29,8 @@ body p{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
-.nav-left {
-  display: flex;
-}
-
 .nav-right {
-  padding-left: 70%;
+  padding-right: 1px;
 }
 
 
@@ -71,3 +66,5 @@ header{
     padding: 20px; 
   }
 
+
+/*social buttons*/
