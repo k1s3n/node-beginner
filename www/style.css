@@ -36,7 +36,6 @@ body p{
   padding-right: 1px;
 }
 
-
 header a:hover {
   color: #20cff4;
   }
@@ -66,6 +65,9 @@ header{
     padding: 20px; 
   }
 
+
+
+  
 /* test menu */
 .menu-container {
   position: relative;
@@ -172,7 +174,7 @@ header{
 
 
 /* mobile styles */
-@media (max-width: 768px) { 
+@media only screen and (max-width: 767px) { 
   .menu-container {
     flex-direction: column;
     align-items: flex-end;
@@ -197,7 +199,6 @@ header{
     top: 0;
     margin: -20px;
     padding: 75px 50px 50px;
-    background: #cdcdcd;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
@@ -211,7 +212,7 @@ header{
 }
 
 /* desktop styles */
-@media (min-width: 768px) { 
+@media only screen and (min-width: 768px) { 
   .menu-container {
     width: 100%;
   }
