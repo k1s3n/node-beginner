@@ -18,7 +18,11 @@ header a {
     padding-right: 10px;
   }
 
-
+body {
+    overflow-x: hidden;
+    font-family: Sans-Serif;
+    margin: 0;
+  }
 
 nav{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -151,7 +155,7 @@ header{
 .menu-container input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(3px,-1px);
-  background: #232323;
+  background: #d5d8dc;
 }
 
 .menu-container input:checked ~ span:nth-child(4) {
@@ -199,11 +203,14 @@ header{
     top: 0;
     margin: -20px;
     padding: 75px 50px 50px;
+    background: #2c3e50;
+    border-radius: 10px;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
     transform-origin: 0% 0%;
     transform: translateX(0%);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    
   }
 
   .menu-container input:checked ~ .menu {
