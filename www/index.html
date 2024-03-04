@@ -57,17 +57,48 @@
 </head>
 
 <body> 
-    <header class="header-box animate__animated animate__zoomIn">
-        <script src="./script.js"></script>
-        <nav>       
-            <a class="animate__animated animate__zoomIn active" href="/">Startsida</a>
-            <a class="animate__animated animate__zoomIn animate__delay-3s" href="/page2.html">Sida 2</a>
-            <a class="animate__animated animate__zoomIn animate__delay-4s" href="/page3.html">Sida 3</a>
-            <a class="animate__animated animate__zoomIn animate__delay-5s" href="/page4.html">Sida 4</a>
-            <a class="animate__animated animate__zoomIn animate__delay-5s" href="/login.html">LOGIN</a>
-        </nav>
-    </header>
+    <nav class="menu-container">
+        <input type="checkbox" aria-label="toggle-menu" />
+        <span></span>
+        <span></span>
+        <span></span>
 
+        <!--Logo-->
+        <a href="#" class="menu-logo">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/0*0VPMncf5GC0baguQ.png" alt="TEST"/>
+          </a>
+        
+        <!--Menu items-->
+        <div class="menu">
+            <ul>
+              <li>
+                <a class="active" href="/">Startsida</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href="/page2.html">Sida 2</a>
+              </li>
+            </ul>
+            <ul>
+                <li>
+                  <a href="/page3.html">Sida 3</a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="/page4.html">Sida 4</a>
+                </li>
+              </ul>
+            </ul>
+            <ul>
+              <li>
+                <a href="/login.html">LOGIN</a>
+              </li>
+            </ul>
+        </div>
+        <script src="./script.js"></script>
+    </nav>
     
     <main class="glass-box animate__animated animate__zoomIn">
         <h1 class="animate__animated animate__fadeInLeft">Christoffers Sida</h1>
