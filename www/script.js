@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
           console.log('försökt att trycka på knappen');
         } else {
           // Ta bort eventuell tidigare markerad länk
-          document.querySelector("header a.active").classList.remove("active");
+          document.querySelector(".menu-container .active").classList.remove("active");
           
           // Markera den klickade länken
           link.classList.add("active");
