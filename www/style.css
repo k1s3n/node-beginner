@@ -18,11 +18,7 @@ header a {
     padding-right: 10px;
   }
 
-body {
-    overflow-x: hidden;
-    font-family: Sans-Serif;
-    margin: 0;
-  }
+
 
 nav{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -30,10 +26,6 @@ nav{
   align-items: center; /* Justera objekt längs tvärsaxeln (vertikalt) */
   padding: 15px; /* Lägger till lite inre utrymme för estetiskt utseende */
   padding-left: 20%;
-}
-
-body p{
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .nav-right {
@@ -69,7 +61,11 @@ header{
     padding: 20px; 
   }
 
-
+body {
+    overflow-x: hidden;
+    font-family: Sans-Serif;
+    margin: 0;
+}
 
   
 /* test menu */
