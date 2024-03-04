@@ -1,10 +1,3 @@
-header{
-  margin-top: 20px;
-  max-width: 70%;
-  margin: 0 auto;
-  height: 50px;
-}
-
 body {
   overflow-x: hidden;
   font-family: Sans-Serif;
@@ -15,40 +8,6 @@ body {
 main{
     max-width: 70%;
     margin: 0  auto;
-}
-
-header a {
-    text-decoration: none;
-    color: #d5d8dc;
-    font-size: 17px;
-    display: inline-block;
-    padding-right: 10px;
-  }
-
-
-
-nav{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: flex;
-  align-items: center; /* Justera objekt längs tvärsaxeln (vertikalt) */
-  padding: 15px; /* Lägger till lite inre utrymme för estetiskt utseende */
-  padding-left: 20%;
-}
-
-.nav-right {
-  padding-right: 1px;
-}
-
-header a:hover {
-  color: #20cff4;
-  }
-
-header a.active{
-    color: #20cff4; 
-}
-
-header{
-  margin-top: 2%;
 }
 
 .header-box {
