@@ -4,11 +4,26 @@ body,html {
   overflow-x: hidden;
 }
 
+.line {
+  border-bottom: 2px solid #31607d;
+  width: 60%;
+  margin: 0 auto;
+}
+
 .menu-container,
 .glass-box{
 max-width: 72%;
 margin: 0 auto;
 box-sizing: border-box;
+}
+
+main h1,h2,h3{
+  color: #31607d;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 main{
@@ -137,6 +152,8 @@ main{
 .menu li {
   padding: 15px 0;
   font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
 
