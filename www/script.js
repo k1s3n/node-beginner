@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var links = document.querySelectorAll("header a");
+    var links = document.querySelectorAll("a.active");
   
     links.forEach(function(link) {
       link.addEventListener("click", function(event) {
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
           console.log('försökt att trycka på knappen');
         } else {
           // Ta bort eventuell tidigare markerad länk
-          document.querySelector(".menu-container .active").classList.remove("active");
+          document.querySelector(".menu-container a.active").classList.remove("active");
           
           // Markera den klickade länken
           link.classList.add("active");
