@@ -84,7 +84,6 @@ header{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0,0.541); /* Skugga för att ge djup */
-  max-width: 72%;
   margin: 0 auto;
   margin-top: 50px;
   box-sizing: border-box;
