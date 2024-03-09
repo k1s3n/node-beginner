@@ -12,4 +12,5 @@ const app = express();
 app.use(express.static('www'));
 
 // Start the web server
-app.listen(port, () => console.log('Running on http://localhost:' + port));
+app.listen(port, () => console.log('Running on http://localhost:' + port)); 
+// hej
