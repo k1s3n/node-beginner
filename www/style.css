@@ -1,3 +1,14 @@
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-top: 0;
+  z-index: 1000;
+}
+
+
+
 body,html {
   margin: 0;
   padding: 0;
@@ -36,7 +47,7 @@ main{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0,0.541); /* Skugga för att ge djup */
-  padding: 20px; 
+  padding: 0px; 
 }
 
 
@@ -68,6 +79,12 @@ main{
   width: 100%; 
   margin-top: 50px;
   box-sizing: border-box;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increase shadow when sticky */
 }
 
 .menu-logo {
