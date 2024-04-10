@@ -1,6 +1,6 @@
 $(document).ready(function() {
   var nav = $('.menu-container');
-  var glass = $('.glass-box');
+  var main = $('main');
   var navOffset = nav.offset().top;
   var scrollThreshold = 100; // Adjust this value according to your needs
 
@@ -17,14 +17,13 @@ $(document).ready(function() {
             var navWidth = nav.outerWidth();
             var leftOffset = (parentWidth - navWidth) / 2;
             nav.css('left', leftOffset + 'px');
-            glass.css('margin-top', '50px');
+            
     } else {
       // Remove the 'fixed' class if the user scrolls back above the threshold
       nav.removeClass('sticky');
       // Restore top margin when menu container is not sticky
       nav.css('margin-top', ''); // Reset margin to default
       nav.css('left', '');
-      glass.css('margin-top', '');
     }
   });
 });
