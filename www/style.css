@@ -21,6 +21,14 @@ body,html {
   margin: 0 auto;
 }
 
+li,a{
+  color: #31607d;
+  text-decoration: none; /* Remove underline */
+   /* Remove bold */
+  
+
+}
+
 .menu-container,
 .glass-box{
 max-width: 72%;
@@ -37,9 +45,32 @@ main p{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main{
+main article{
     max-width: 70%;
     margin: 0  auto;
+}
+
+main ul {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+main img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+main img[src*="left"] {
+  width: 40%;
+  float: left;
+  margin: 0 30px 20px 0;
+}
+
+
+main img[src*="right"] {
+  width: 40%;
+  float: right;
+  margin: 0 0 10px 10px;
 }
 
 .header-box {
@@ -93,9 +124,11 @@ main{
 }
 
 .menu-logo img {
-  max-height: 40px;
+  max-height: 500px;
   max-width: 100px;
-  flex-shrink: 0;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  mix-blend-mode: lighten;
 }
 
 .menu-container a {

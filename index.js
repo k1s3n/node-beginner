@@ -1,16 +1,23 @@
-// Use Express - a web server module
+// Imports
+import * as url from 'url';
+import path from 'path';
 import express from 'express';
-// The port to run the server on
-const port = 80;
 
-// Create a new web server
-// store in the variable app
+// The absolute file path to this folder
+const dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+// A port to start the  web serve on
+const port = 3002;
+
+// KK a web server application
 const app = express();
 
-// Serve all files in the www folder
-// to the web browser
+// Serve the content in the frontend folder
 app.use(express.static('www'));
 
-// Start the web server
-app.listen(port, () => console.log('Running on http://localhost:' + port)); 
-// hej
+// Start the web server application
+app.listen(port, () =>
+  console.log(`Listening on http://localhost:${port}`));
+
+// If a url does not correspond to any file then serve tehe index.html file
+app.get('*', (req, res) => res.sendFile(path.join(dirname, 'www', 'index.html')));
