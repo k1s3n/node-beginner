@@ -3,14 +3,16 @@
 This is a test homepage for in order to learn single page with content
 ![Our products](/images/bild.png?right "Our products.")
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! 
-[Click here](https://example.com)
+[Link text](#Logg)
 
-Reiciendis est rerum laudantium optio porro. Est, consequatur tempore!
+## Reiciendis 
+est rerum laudantium optio porro. Est, consequatur tempore!
 Magnam ullam, aliquam corporis cupiditate dolorem itaque, ut vero nesciunt aliquid, aperiam odit delectus nihil dicta eveniet porro exercitationem est repellendus obcaecati maiores sint reiciendis cumque. Placeat laudantium ab laborum!
 Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero voluptatibus?
 Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero officia, animi ducimus quos numquam hic quibusdam minus perspiciatis quas adipisci distinctio molestias! Ab esse vel enim?
 
 ## info
+[Reiciendis](#project-1-sentiment-analysis-app)
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! Tempore, rem labore! Reiciendis est rerum laudantium optio porro. Est, consequatur tempore!
 Magnam ullam, aliquam corporis cupiditate dolorem itaque, ut vero nesciunt aliquid, aperiam odit delectus nihil dicta eveniet porro exercitationem est repellendus obcaecati maiores sint reiciendis cumque. Placeat laudantium ab laborum!
 Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero voluptatibus?
@@ -27,6 +29,8 @@ Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero 
 Magnam ullam, aliquam corporis cupiditate dolorem itaque, ut vero nesciunt aliquid, aperiam odit delectus nihil dicta eveniet porro exercitationem est repellendus obcaecati maiores sint reiciendis cumque. Placeat laudantium ab laborum!
 Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero voluptatibus?
 Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero officia, animi ducimus quos numquam hic quibusdam minus perspiciatis quas adipisci distinctio molestias! Ab esse vel enim?
+
+## Logg
 
 
 # About Me
@@ -47,11 +51,11 @@ Built a chatbot using natural language processing techniques. The chatbot assist
 
 ## Recent Posts
 
-- [Understanding Neural Networks](blog/neural-networks.md)
-- [Introduction to Natural Language Processing](blog/nlp-intro.md)
-- [How to be a leader](dad)
+[Understanding Neural Networks](#projects)
+- [Introduction to Natural Language Processing](./about-me)
+- [How to be a leader](www.google.com)
 # Contact Me
 
-Feel free to reach out to me via email at [example@email.com](mailto:example@email.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/example).
+Feel free to reach out to me via email at [example@email.com](mailto:example@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/example).
 
 
