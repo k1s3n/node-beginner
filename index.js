@@ -2,7 +2,7 @@
 import * as url from 'url';
 import path from 'path';
 import express from 'express';
-
+//hej vi har en ny funktion
 // The absolute file path to this folder
 const dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
