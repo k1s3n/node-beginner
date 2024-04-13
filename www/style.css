@@ -7,12 +7,11 @@
   z-index: 1000;
 }
 
-
-
 body,html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .line {
@@ -37,6 +36,7 @@ box-sizing: border-box;
 }
 
 main h1,h2,h3{
+  padding-top: 10px;
   color: #31607d;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -61,16 +61,16 @@ main img {
 }
 
 main img[src*="left"] {
-  width: 40%;
+  width: 40%; 
   float: left;
-  margin: 0 30px 20px 0;
+  margin: 0 30px 10px 0;
 }
 
 
 main img[src*="right"] {
   width: 40%;
   float: right;
-  margin: 0 0 10px 10px;
+  margin: 0px 0 10px 10px;
 }
 
 .header-box {
@@ -224,7 +224,10 @@ main img[src*="right"] {
   }
 
   .menu-logo img {
-    max-height: 30px;
+    max-height: 40px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    mix-blend-mode: darken;
   }
 
   .menu {
@@ -296,7 +299,7 @@ main img[src*="right"] {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  top: 0;
+  top: 0  ;
   left: 0;
   background: #31607d;
   overflow: hidden;

@@ -1,54 +1,46 @@
 # Welcome
 
-### 2023-24-1
-* 1
-* 2
-* 3
-* 4
-* 5
-* 6
+![Future of work](/images/future-of-work.png "Future of work")
 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel vero repudiandae ducimus incidunt, eum a unde quod nesciunt suscipit animi, quam eligendi magni. Optio, veniam aperiam? Nobis ducimus perspiciatis ex?
+Earum accusantium tenetur laudantium sunt ipsa quaerat quas libero odit, sed placeat at ut, magni, totam qui similique ullam. Culpa sequi et aut aliquid, atque harum quisquam voluptates molestiae quaerat!
 
-### Ny post
-jdaojwdawod
+## Images right
 
-Hej hej hej jidwjaidha uwiohdhawu dhuiawhduihawuidhawuihdawudaw
-
-This is a test homepage for in order to learn single page with content
-![Our products](/images/bild.png?right "Our products.")
+This is a test homepage to learn single page with markdown
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! 
-[Link text](#Logg)
+[google](https://google.com)
 
-### Reiciendis 
+### Servers
+![Future](/images/future.jpg?left "Future")
 est rerum laudantium optio porro. Est, consequatur tempore!
 Magnam ullam, aliquam corporis cupiditate dolorem itaque, ut vero nesciunt aliquid, aperiam odit delectus nihil dicta eveniet porro exercitationem est repellendus obcaecati maiores sint reiciendis cumque. Placeat laudantium ab laborum!
 Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero voluptatibus?
 Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero officia, animi ducimus quos numquam hic quibusdam minus perspiciatis quas adipisci distinctio molestias! Ab esse vel enim?
 Hej ea 
 
-### New post
-
-Detta är en ny post
-
-### info
+### Computers
+![Our products](/images/monitor-of-the-future.png?left "Our products.")
 [Reiciendis](#project-1-sentiment-analysis-app)
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! Tempore, rem labore! Reiciendis est rerum laudantium optio porro. Est, consequatur tempore!
 Magnam ullam, aliquam corporis cupiditate dolorem itaque, ut vero nesciunt aliquid, aperiam odit delectus nihil dicta eveniet porro exercitationem est repellendus obcaecati maiores sint reiciendis cumque. Placeat laudantium ab laborum!
-Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero voluptatibus?
-Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero officia, animi ducimus quos numquam hic quibusdam minus perspiciatis quas adipisci distinctio molestias! Ab esse vel enim?
+Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero.
 
 
 ### List
+
 * ***Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! Tempore, rem labore! Reiciendis est rerum laudantium optio porro. Est, consequatur tempore!***
 * ***Magnam ullam, aliquam corporis cupiditate dolorem itaque, ut vero nesciunt aliquid, aperiam odit delectus nihil dicta eveniet porro exercitationem est repellendus obcaecati maiores sint reiciendis cumque. Placeat laudantium ab laborum!***
 * ***Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero voluptatibus?***
 * ***Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero officia, animi ducimus quos numquam hic quibusdam minus perspiciatis quas adipisci distinctio molestias! Ab esse vel enim?***
 
+## Work
+
 **Lorem ipsum** dolor sit amet *consectetur adipisicing elit*. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! Tempore, rem labore! Reiciendis est rerum laudantium optio porro. Est, consequatur tempore!
 Magnam ullam, aliquam corporis cupiditate dolorem itaque, ut vero nesciunt aliquid, aperiam odit delectus nihil dicta eveniet porro exercitationem est repellendus obcaecati maiores sint reiciendis cumque. Placeat laudantium ab laborum!
 Itaque officia excepturi nesciunt voluptatibus, nostrum rerum alias ea neque pariatur ipsa facilis deserunt fuga eius. Consectetur quidem quibusdam excepturi aliquam beatae suscipit, doloribus magnam optio ab earum vero voluptatibus?
 Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero officia, animi ducimus quos numquam hic quibusdam minus perspiciatis quas adipisci distinctio molestias! Ab esse vel enim?
-
+[Back to top](#list)
 ### Logg
 
 
@@ -72,9 +64,17 @@ Built a chatbot using natural language processing techniques. The chatbot assist
 
 [Understanding Neural Networks](#projects)
 - [Introduction to Natural Language Processing](./about-me)
-- [How to be a leader](www.google.com)
+- [How to be a leader](https://google.com)
+- [howjew](#kalle)
 # Contact Me
 
-Feel free to reach out to me via email at [example@email.com](mailto:example@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/example).
+![drawing](/images/Contact.png?left "Contact")
+**Email at:** [example@email.com](mailto:example@gmail.com)  
 
+**LinkedIn:** [LinkedIn](https://www.linkedin.com/in/example)
+  
+**Phone:** Xxxx-xxXX  
+  
+**Adress** xxxx
 
+**Country** xxxxx
