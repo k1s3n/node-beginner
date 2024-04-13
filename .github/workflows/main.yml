@@ -12,15 +12,14 @@ on:
 jobs:
   # build, the name of the job, a server to create and auto configure
   build:
-    name: Publish a branch to your web server
+    name: Publish the main branch to our web server
     runs-on: ubuntu-22.04
     steps:
-    - name: checkout the main brach
+    - name: checkout the main branch
       uses: actions/checkout@v4
       with:
         ref: main
-
-    - name: copy file via scp (secure copy)
+    - name: copy file via scp - secure copy
       uses: appleboy/scp-action@v0.1.4
       with:
         host: ${{ secrets.HOST }}
