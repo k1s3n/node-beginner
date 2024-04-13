@@ -22,6 +22,7 @@ const menuItems = content.map(x => x.slice(4).split('<')[0]);
 
 // Add initial html for the site
 $('body').innerHTML = /*html*/`
+<header>
 <div class="background">
     <span></span>
     <span></span>
@@ -70,6 +71,7 @@ $('body').innerHTML = /*html*/`
     <span></span>
     <span></span>
  </div>
+ </header>
 <nav class="menu-container animate__animated animate__fadeInDown">
     <input type="checkbox" aria-label="toggle-menu" />
     <span></span>
@@ -106,9 +108,14 @@ $('body').innerHTML = /*html*/`
     </div>
   </nav>
 
-<main class="glass-box animate__animated animate__fadeInUp">
+<main class="glass-box animate__animated animate__zoomIn">
 <article></article>
 </main>
+<footer class="animate__animated animate__fadeInUp">
+  <div class="footer-content">
+  <p>© 2024 DevOps2023 Company<p>
+  </div>
+</footer>
 `;
 
 // When we click somewhere - check if the click
