@@ -128,7 +128,7 @@ $('body').addEventListener('click', e => {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
-  } else if (href.startsWith('http://') || href.startsWith('https://')) {
+  } else if (!href.startsWith('http://') || href.startsWith('https://')) {
     // Öppna länken i en ny flik
     window.open(href, '_blank');
     e.preventDefault();
