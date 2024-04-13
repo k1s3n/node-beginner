@@ -1,0 +1,31 @@
+name: Continuous-Deployment
+
+# Trigger which git action (push, pull_request)
+# in which branch(es) should start the jobs...
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# jobs to run
+jobs:
+  # build, the name of the job, a server to create and auto configure
+  build:
+    name: Publish a branch to your web server
+    runs-on: ubuntu-22.04
+    steps:
+    - name: checkout the main brach
+      uses: actions/checkout@v4
+      with:
+        ref: main
+
+    - name: copy file via scp (secure copy)
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: '*.*'
+        target: /var/www/node-beginner
