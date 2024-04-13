@@ -2,7 +2,7 @@
 
 ## Ny post
 
-Hej hej hej
+Hej hej hej jidwjaidha uwiohdhawu dhuiawhduihawuidhawuihdawudaw
 
 This is a test homepage for in order to learn single page with content
 ![Our products](/images/bild.png?right "Our products.")
