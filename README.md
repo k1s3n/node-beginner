@@ -1,2 +1,2 @@
 # node-beginner
-CSS, html, javascript
+CSS, html, javascript, markdown and Continuous-Deployment
