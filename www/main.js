@@ -120,19 +120,6 @@ $('body').addEventListener('click', e => {
   // Check that the link is internal (starts with '/')
   let href = aTag.getAttribute('href');
   if (href[0] === '/') { return; }
-  if (href.startsWith('#')) {
-    // Scroll to the corresponding section
-    e.preventDefault();
-    let targetId = href.substring(1); // Remove the '#' from the href
-    let targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  } else if (!href.startsWith('http://') || href.startsWith('https://')) {
-    // Öppna länken i en ny flik
-    window.open(href, '_blank');
-    e.preventDefault();
-  }
   // Prevent the default behavior on click on an a tag 
   // (which is a hard page reload)
   e.preventDefault();
