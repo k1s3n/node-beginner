@@ -71,6 +71,8 @@ main img[src*="right"] {
   width: 40%;
   float: right;
   margin: 0px 0 10px 10px;
+  display: block; /* Säkerställ att bilden är blocknivå för korrekt centrering */
+  margin: 0 auto; /* Centrera bilden horisontellt */
 }
 
 .header-box {
@@ -228,6 +230,25 @@ main img[src*="right"] {
     aspect-ratio: 3/2;
     object-fit: cover;
     mix-blend-mode: darken;
+  }
+  main img {
+    border-radius: 10px;
+    width: 90%;
+    float: none;
+    margin-bottom: 20px;
+  }
+
+  main img[src*="left"] {
+    width: 90%;
+    float: none;
+    margin-bottom: 10px; /* Lägg till marginal botten för att skapa utrymme under bilden */
+  }
+  
+  
+  main img[src*="right"] {
+    width: 90%;
+    float: none;
+    margin-bottom: 10px; /* Lägg till marginal botten för att skapa utrymme under bilden */
   }
 
   .menu {
