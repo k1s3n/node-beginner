@@ -1,5 +1,9 @@
 # Welcome
 
+## Ny post
+
+Hej hej hej
+
 This is a test homepage for in order to learn single page with content
 ![Our products](/images/bild.png?right "Our products.")
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! 
