@@ -111,7 +111,7 @@ $('body').innerHTML = /*html*/`
 <main class="glass-box animate__animated animate__zoomIn">
 <article></article>
 </main>
-<footer class="animate__animated animate__fadeInUp">
+<footer>
   <div class="footer-content">
   <p>© 2024 DevOps2023 Company<p>
   </div>
