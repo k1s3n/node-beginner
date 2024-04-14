@@ -120,43 +120,6 @@ $('body').innerHTML = /*html*/`
   </div>
 </footer>
 `;
-// Import fetchDataFromDatabase function from your index.js file
-const fetchDataFromDatabase = require('./index.js').fetchDataFromDatabase;
-
-// Function to update HTML content with data fetched from the database
-async function updateHTMLWithDatabaseData() {
-  try {
-    // Fetch data from the database
-    const data = await fetchDataFromDatabase();
-
-    // Update the HTML content using innerHTML or any other method
-    const container = document.getElementById('data-container');
-    container.innerHTML = ''; // Clear previous content
-    data.forEach(item => {
-      // Create elements to display post details
-      const div = document.createElement('div');
-      const postId = document.createElement('h3');
-      const title = document.createElement('h2');
-      const content = document.createElement('p');
-
-      // Set content for the elements
-      postId.textContent = `Post ID: ${item.post_id}`;
-      title.textContent = item.title;
-      content.textContent = item.content;
-
-      // Append elements to the container
-      div.appendChild(postId);
-      div.appendChild(title);
-      div.appendChild(content);
-      container.appendChild(div);
-    });
-  } catch (error) {
-    console.error('Error updating HTML with database data:', error);
-  }
-}
-
-// Call the function to update HTML with database data
-updateHTMLWithDatabaseData();
 
 //-------------
 
