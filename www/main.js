@@ -126,6 +126,20 @@ $('body').addEventListener('click', e => {
   if (!aTag) { return; }
   // Check that the link is internal (starts with '/')
   let href = aTag.getAttribute('href');
+
+  if (href.startsWith('mailto:')) {
+    // Handle mailto links
+    window.location.href = href; // Open mail client
+    return;
+  }
+
+  // Check if it's an HTTPS link
+  if (href.startsWith('https://')) {
+    // Handle HTTPS links
+    e.preventDefault();
+    window.open(href, '_blank'); // Open in new tab
+    return;
+  }
   if (!href[0] === '/') { return; }
   // Prevent the default behavior on click on an a tag 
   // (which is a hard page reload)
