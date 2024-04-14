@@ -149,7 +149,7 @@ function showView() {
   // Add the css class active to the correct a tag in nav
   let navTags = [...document.querySelectorAll('nav a')];
   navTags.forEach(element => element.classList.remove('active'));
-  navTags[index].classList.add('active');
+  navTags[index+1].classList.add('active');
 }
 
 // Listen to the back/forward buttons - change view based on url
