@@ -126,7 +126,7 @@ $('body').addEventListener('click', e => {
   if (!aTag) { return; }
   // Check that the link is internal (starts with '/')
   let href = aTag.getAttribute('href');
-  if (!href[0] === '/') { return; }
+  if (!href || !href.startsWith('/')) { return; }
   // Prevent the default behavior on click on an a tag 
   // (which is a hard page reload)
   e.preventDefault();
