@@ -115,7 +115,6 @@ $('body').innerHTML = /*html*/`
 </main>
 
 <footer class="animate__animated animate__slideInUp">
-  <div id="data-container"></div>
   <div class="footer-content">
   <p>© 2024 DevOps2023 Company<p>
   </div>
