@@ -111,7 +111,7 @@ $('body').innerHTML = /*html*/`
 <main class="glass-box animate__animated animate__zoomIn">
 <article></article>
 </main>
-<footer>
+<footer class="animate__animated animate__fadeInUp">
   <div class="footer-content">
   <p>© 2024 DevOps2023 Company<p>
   </div>
@@ -126,7 +126,7 @@ $('body').addEventListener('click', e => {
   if (!aTag) { return; }
   // Check that the link is internal (starts with '/')
   let href = aTag.getAttribute('href');
-  if (!href || !href.startsWith('/')) { return; }
+  if (!href[0] === '/') { return; }
   // Prevent the default behavior on click on an a tag 
   // (which is a hard page reload)
   e.preventDefault();
@@ -149,7 +149,7 @@ function showView() {
   // Add the css class active to the correct a tag in nav
   let navTags = [...document.querySelectorAll('nav a')];
   navTags.forEach(element => element.classList.remove('active'));
-  navTags[index+1].classList.add('active');
+  navTags[index].classList.add('active');
 }
 
 // Listen to the back/forward buttons - change view based on url
