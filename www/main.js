@@ -72,7 +72,7 @@ $('body').innerHTML = /*html*/`
     <span></span>
  </div>
  </header>
-<nav class="menu-container animate__animated animate__fadeInDown">
+<nav class="menu-container animate__animated animate__slideInDown">
     <input type="checkbox" aria-label="toggle-menu" />
     <span></span>
     <span></span>
@@ -108,15 +108,58 @@ $('body').innerHTML = /*html*/`
     </div>
   </nav>
 
-<main class="glass-box animate__animated animate__zoomIn">
-<article></article>
+<main class="glass-box animate__animated animate__slideInUp">
+<article>
+<div id="data-container"></div>
+</article>
 </main>
-<footer class="animate__animated animate__fadeInUp">
+
+<footer class="animate__animated animate__slideInUp">
+  <div id="data-container"></div>
   <div class="footer-content">
   <p>© 2024 DevOps2023 Company<p>
   </div>
 </footer>
 `;
+// Import fetchDataFromDatabase function from your index.js file
+const fetchDataFromDatabase = require('./index.js').fetchDataFromDatabase;
+
+// Function to update HTML content with data fetched from the database
+async function updateHTMLWithDatabaseData() {
+  try {
+    // Fetch data from the database
+    const data = await fetchDataFromDatabase();
+
+    // Update the HTML content using innerHTML or any other method
+    const container = document.getElementById('data-container');
+    container.innerHTML = ''; // Clear previous content
+    data.forEach(item => {
+      // Create elements to display post details
+      const div = document.createElement('div');
+      const postId = document.createElement('h3');
+      const title = document.createElement('h2');
+      const content = document.createElement('p');
+
+      // Set content for the elements
+      postId.textContent = `Post ID: ${item.post_id}`;
+      title.textContent = item.title;
+      content.textContent = item.content;
+
+      // Append elements to the container
+      div.appendChild(postId);
+      div.appendChild(title);
+      div.appendChild(content);
+      container.appendChild(div);
+    });
+  } catch (error) {
+    console.error('Error updating HTML with database data:', error);
+  }
+}
+
+// Call the function to update HTML with database data
+updateHTMLWithDatabaseData();
+
+//-------------
 
 // When we click somewhere - check if the click
 // sis on an a tag with an internal link
@@ -171,3 +214,5 @@ window.addEventListener('popstate', () => showView());
 
 // Show the first view after hard page load/reload
 showView();
+
+
