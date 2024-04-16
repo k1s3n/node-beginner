@@ -9,7 +9,7 @@ async function fetchDataFromDatabase() {
     const connection = await pool.getConnection();
     const [rows, fields] = await connection.execute('SELECT * FROM posts');
     connection.release();
-    console.log('Database connection successful'); // Log success message
+    console.log('Database connection successful');
     return rows; // Assuming rows is an array of objects containing your data
   } catch (error) {
     console.error('Error fetching data from database:', error);
