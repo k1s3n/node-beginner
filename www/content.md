@@ -5,10 +5,30 @@
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel vero repudiandae ducimus incidunt, eum a unde quod nesciunt suscipit animi, quam eligendi magni. Optio, veniam aperiam? Nobis ducimus perspiciatis ex?
 Earum accusantium tenetur laudantium sunt ipsa quaerat quas libero odit, sed placeat at ut, magni, totam qui similique ullam. Culpa sequi et aut aliquid, atque harum quisquam voluptates molestiae quaerat!
 
+## Test code block
+
+```
+// Function to fetch data from the database
+async function fetchDataFromDatabase() {
+  try {
+    // Perform a fetch request to your server to retrieve data from the database
+    const response = await fetch('/blog'); // Adjust the endpoint URL accordingly
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching data from the database:', error);
+    return []; // Return an empty array if an error occurs
+  }
+}
+
+// Call the function to update HTML with database data only if the URL path is '/blog'
+if (window.location.pathname === '/blog') {
+  updateHTMLWithDatabaseData();
+}
+```
+
 ## Images right
-```
-console.log("Hello World");
-```
+
 This is a test homepage to learn single page with markdown
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ipsa perspiciatis, unde asperiores harum at nostrum praesentium doloribus! 
 [google](https://google.com)

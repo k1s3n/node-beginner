@@ -1,5 +1,5 @@
-const mysql = require('mysql2');
-const settings = require('./settings.json');
+import mysql from 'mysql2/promise'; // Use promise version of mysql2
+import settings from './settings.json' assert { type: "json" };
 
 const pool = mysql.createPool({
   host: settings.db.host,
@@ -11,4 +11,4 @@ const pool = mysql.createPool({
   queueLimit: 0
 });
 
-module.exports = pool;
+export default pool;
