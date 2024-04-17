@@ -110,7 +110,6 @@ $('body').innerHTML = /*html*/`
 
 <main class="glass-box animate__animated animate__slideInUp">
 <article>
-<div id="data-container"></div>
 </article>
 </main>
 
@@ -123,6 +122,51 @@ $('body').innerHTML = /*html*/`
 
 
 //-------------
+import express from 'express';
+import { fetchDataFromDatabase } from './index.js';
+
+// Create an Express app
+const app = express();
+
+// Define a route handler for the /blog route
+app.get('/blog', async (req, res) => {
+  try {
+    // Fetch data from the database
+    const data = await fetchDataFromDatabase();
+
+    // Render the HTML template with the fetched data
+    const html = `
+      <html>
+        <head>
+          <title>Blog</title>
+        </head>
+        <body>
+        <main class="glass-box animate__animated animate__slideInUp">
+          <article>
+
+          <h1>Welcome to the Blog</h1>
+          <div id="data-container">
+            ${data.map(post => `
+              <div class="post">
+                <h2>${post.title}</h2>
+                <p>${post.content}</p>
+              </div>
+            `).join('')}
+          </div>
+          </article>
+        </main>
+        </body>
+      </html>
+    `;
+
+    // Send the HTML response
+    res.send(html);
+  } catch (error) {
+    // Handle errors
+    console.error('Error fetching data:', error);
+    res.status(500).send('Internal server error');
+  }
+});
 
 //-------------
 
