@@ -30,8 +30,39 @@ const port = 3002;
 // KK a web server application
 const app = express();
 
-// Assuming you have an Express app instance named 'app'
+app.get('/blog', async (req, res) => {
+  try {
+    // Fetch data from the database
+    const data = await fetchDataFromDatabase();
 
+    // Render the HTML template with the fetched data
+    res.send(`
+      <html>
+        <head>
+          <title>Blog</title>
+        </head>
+        <body>
+          <main class="glass-box animate__animated animate__slideInUp">
+            <article>
+              ${data.map(post => `
+                <div class="post">
+                  <h2>${post.title}</h2>
+                  <p>${post.content}</p>
+                </div>
+              `).join('')}
+            </article>
+          </main>
+        </body>
+      </html>
+    `);
+  } catch (error) {
+    // Handle errors
+    console.error('Error fetching data:', error);
+    res.status(500).send('Internal server error');
+  }
+});
+
+// Assuming you have an Express app instance named 'app'
 
 app.get('/posts', async (req, res) => {
   try {
