@@ -18,9 +18,9 @@ async function fetchDataFromDatabase() {
     return [];
   }
 }
-
 // Attempt to fetch data from the database
 fetchDataFromDatabase();
+export { fetchDataFromDatabase };
 //hej vi har en ny funktion
 // The absolute file path to this folder
 const dirname = url.fileURLToPath(new URL('.', import.meta.url));
@@ -29,6 +29,9 @@ const port = 3002;
 
 // KK a web server application
 const app = express();
+
+// Assuming you have an Express app instance named 'app'
+
 
 app.get('/posts', async (req, res) => {
   try {
@@ -54,4 +57,4 @@ app.listen(port, () =>
   console.log(`Listening on http://localhost:${port}`));
 
 // If a url does not correspond to any file then serve tehe index.html file
-app.get('*', (req, res) => res.sendFile(path.join(dirname, 'www', 'index.html')));
+app.get('*', (req, res) => res.sendFile(path.join(dirname, 'www', 'index.html'))); 
