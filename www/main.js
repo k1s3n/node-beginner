@@ -1,5 +1,4 @@
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-import { fetchDataFromDatabase } from './index.js';
 
 // Wrap document.querySelector in a function so we can call it using $
 const $ = cssSelector => document.querySelector(cssSelector);
@@ -125,34 +124,6 @@ $('body').innerHTML = /*html*/`
 
 //-------------
 
-// Define a route handler for the /blog route
-app.get('/blog', async (req, res) => {
-  try {
-    // Fetch posts data from your database
-    const posts = await fetchDataFromDatabase(); // Implement this function to fetch posts data
-    
-    // Render the HTML page with posts data embedded in it
-    res.send(`
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Blog</title>
-      </head>
-      <body>
-        <h1>Blog Posts</h1>
-        <ul>
-          ${posts.map(post => `<li>${post.title}</li>`).join('')}
-        </ul>
-      </body>
-      </html>
-    `);
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-    res.status(500).send('Internal Server Error');
-  }
-});
 //-------------
 
 // When we click somewhere - check if the click

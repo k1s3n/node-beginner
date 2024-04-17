@@ -20,7 +20,6 @@ async function fetchDataFromDatabase() {
 }
 // Attempt to fetch data from the database
 fetchDataFromDatabase();
-export { fetchDataFromDatabase };
 //hej vi har en ny funktion
 // The absolute file path to this folder
 const dirname = url.fileURLToPath(new URL('.', import.meta.url));
