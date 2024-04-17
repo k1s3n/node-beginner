@@ -135,7 +135,7 @@ app.get('/blog', async (req, res) => {
     const data = await fetchDataFromDatabase();
 
     // Render the HTML template with the fetched data
-    const html = `
+    $('body').innerHTML = /*html*/`
       <html>
         <head>
           <title>Blog</title>
@@ -143,8 +143,6 @@ app.get('/blog', async (req, res) => {
         <body>
         <main class="glass-box animate__animated animate__slideInUp">
           <article>
-
-          <h1>Welcome to the Blog</h1>
           <div id="data-container">
             ${data.map(post => `
               <div class="post">
