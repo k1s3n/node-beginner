@@ -153,8 +153,28 @@ $('body').addEventListener('click', e => {
   e.preventDefault();
   // Instead change the url without reload
   history.pushState(null, '', href);
-  showView();
+  // If the link is to the blog, show the blog content
+  if (href === '/blog') {
+    showBlogContent();
+  } else {
+    // If not, show the corresponding view/page
+    showView();
+  }
 });
+
+
+// Function to fetch and show the blog content
+async function showBlogContent() {
+  try {
+    // Fetch data from the server
+    const response = await fetch('/blog');
+    const html = await response.text();
+    // Update the main content with the fetched HTML
+    $('main article').innerHTML = html;
+  } catch (error) {
+    console.error('Error fetching blog content:', error);
+  }
+}
 
 // Show a view/"page"
 function showView() {
@@ -167,7 +187,7 @@ function showView() {
   // Get the content part corresponding to the menuItem
   let contentPart = content[index];
   // Replace the content in the main element
-  $('main article').innerHTML = contentPart + html;
+  $('main article').innerHTML = contentPart;
   // Add the css class active to the correct a tag in nav
   let navTags = [...document.querySelectorAll('nav a')];
   navTags.forEach(element => element.classList.remove('active'));
