@@ -122,7 +122,16 @@ $('body').innerHTML = /*html*/`
 
 
 //-------------
-
+// When the DOM is ready
+document.addEventListener('DOMContentLoaded', async () => {
+  // Fetch the blog content if the URL path is '/blog'
+  if (window.location.pathname === '/blog') {
+    await showBlogContent();
+  } else {
+    // If not, show the corresponding view/page
+    showView();
+  }
+});
 //-------------
 
 // When we click somewhere - check if the click
@@ -171,9 +180,6 @@ async function showBlogContent() {
     const html = await response.text();
     // Update the main content with the fetched HTML
     $('main article').innerHTML = html;
-    let navTags = [...document.querySelectorAll('nav a')];
-    navTags.forEach(element => element.classList.remove('active'));
-    navTags[index+1].classList.add('active');
   } catch (error) {
     console.error('Error fetching blog content:', error);
   }
