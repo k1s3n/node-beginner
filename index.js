@@ -8,7 +8,7 @@ import fs from 'fs';
 async function fetchDataFromDatabase() {
   try {
     const connection = await pool.getConnection();
-    const [rows, fields] = await connection.execute('SELECT * FROM posts ORDER BY DESC');
+    const [rows, fields] = await connection.execute('SELECT * FROM posts ORDER BY post_id DESC');
     connection.release();
     console.log('Database connection successful');
     return rows; // Assuming rows is an array of objects containing your data
