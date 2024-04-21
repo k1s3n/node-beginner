@@ -63,4 +63,4 @@ app.listen(port, () =>
   console.log(`Listening on http://localhost:${port}`));
 
 // If a url does not correspond to any file then serve tehe index.html file
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'www', 'index.html'))); 
+app.get('*', (req, res) => res.sendFile(path.join(dirname, 'www', 'index.html'))); 
