@@ -181,9 +181,10 @@ async function showBlogContent() {
     // Fetch data from the server
     const response = await fetch('/blog');
     const html = await response.text();
+    $('main article').innerHTML = '';
     // Update the main content with the fetched HTML
     $('main article').innerHTML = html;
-
+    blogContentLoaded = true;
   } catch (error) {
     console.error('Error fetching blog content:', error);
   }
