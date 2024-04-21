@@ -184,7 +184,6 @@ async function showBlogContent() {
     $('main article').innerHTML = '';
     // Update the main content with the fetched HTML
     $('main article').innerHTML = html;
-    blogContentLoaded = true;
   } catch (error) {
     console.error('Error fetching blog content:', error);
   }
