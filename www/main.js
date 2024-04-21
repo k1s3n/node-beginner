@@ -171,6 +171,9 @@ async function showBlogContent() {
     const html = await response.text();
     // Update the main content with the fetched HTML
     $('main article').innerHTML = html;
+    let navTags = [...document.querySelectorAll('nav a')];
+    navTags.forEach(element => element.classList.remove('active'));
+    navTags[index+1].classList.add('active');
   } catch (error) {
     console.error('Error fetching blog content:', error);
   }
