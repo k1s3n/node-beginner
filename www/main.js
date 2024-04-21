@@ -161,6 +161,7 @@ function showView() {
   let route = location.pathname;
   // Find the corresponding menuItem index number to the href
   let index = menuItems.findIndex(x => '/' + kebabCase(x) === route);
+  
   // If not found set the index to 0 (the first item)
   index = index < 0 ? 0 : index;
   // Get the content part corresponding to the menuItem
