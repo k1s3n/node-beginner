@@ -8,7 +8,7 @@ import fs from 'fs';
 async function fetchDataFromDatabase() {
   try {
     const connection = await pool.getConnection();
-    const [rows, fields] = await connection.execute('SELECT * FROM posts');
+    const [rows, fields] = await connection.execute('SELECT * FROM posts ORDER BY DESC');
     connection.release();
     console.log('Database connection successful');
     return rows; // Assuming rows is an array of objects containing your data
@@ -47,7 +47,7 @@ app.get('/blog', async (req, res) => {
     const content = fs.readFileSync('content.md', 'utf8');
 
     // Render the content and posts
-    res.send(`<h1>Blog</h1>${content}<h2>Posts</h2>${renderPosts(posts)}`);
+    res.send(`${content}${renderPosts(posts)}`);
   } catch (error) {
     console.error('Error rendering blog page:', error);
     res.status(500).send('Internal server error');
