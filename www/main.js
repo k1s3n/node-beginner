@@ -134,6 +134,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 //-------------
 
+let blogContentLoaded = false;
 // When we click somewhere - check if the click
 // sis on an a tag with an internal link
 $('body').addEventListener('click', e => {
@@ -164,7 +165,9 @@ $('body').addEventListener('click', e => {
   history.pushState(null, '', href);
   // If the link is to the blog, show the blog content
   if (href === '/blog') {
-    showBlogContent();
+    if (!blogContentLoaded) {
+      showBlogContent();
+    }
   } else {
     // If not, show the corresponding view/page
     showView();
@@ -180,6 +183,7 @@ async function showBlogContent() {
     const html = await response.text();
     // Update the main content with the fetched HTML
     $('main article').innerHTML = html;
+
   } catch (error) {
     console.error('Error fetching blog content:', error);
   }
