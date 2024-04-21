@@ -47,12 +47,13 @@ app.get('/blog', async (req, res) => {
     const content = fs.readFileSync('content.md', 'utf8');
 
     // Render the content and posts
-    res.send(`${content}${renderPosts(posts)}`);
+    res.send(`${renderPosts(posts)}${content}`);
   } catch (error) {
     console.error('Error rendering blog page:', error);
     res.status(500).send('Internal server error');
   }
 });
+
 
 // Serve the content in the frontend folder
 app.use(express.static('www'));
