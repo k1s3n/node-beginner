@@ -167,7 +167,7 @@ function showView() {
   // Get the content part corresponding to the menuItem
   let contentPart = content[index];
   // Replace the content in the main element
-  $('main article').innerHTML = contentPart;
+  $('main article').innerHTML = contentPart + html;
   // Add the css class active to the correct a tag in nav
   let navTags = [...document.querySelectorAll('nav a')];
   navTags.forEach(element => element.classList.remove('active'));
