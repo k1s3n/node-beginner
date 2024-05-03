@@ -40,20 +40,20 @@ const app = express();
 app.get('/blog', async (req, res) => {
   try {
     // Fetch data from the database
-    const posts = await fetchDataFromDatabase();
+    const connection = await pool.getConnection();
+    const [rows, fields] = await connection.execute('SELECT * FROM posts');
+    connection.release();
 
-    // Read content from content.md
-    const content = fs.readFileSync('content.md', 'utf8');
-    const renderedPosts = renderPosts(posts);
-    // Render the content and posts
-    $('main article').innerHTML = renderedPosts;
-    //res.send(`${renderPosts(posts)}`);
+    // Render the posts
+    const renderedPosts = renderPosts(rows);
+
+    // Send the rendered posts as HTML response
+    res.send(renderedPosts);
   } catch (error) {
-    console.error('Error rendering blog page:', error);
+    console.error('Error fetching or rendering blog posts:', error);
     res.status(500).send('Internal server error');
   }
 });
-
 
 // Serve the content in the frontend folder
 app.use(express.static('www'));
