@@ -13,10 +13,8 @@ async function fetchDataFromDatabase() {
     console.log('Database connection successful');
     return rows; // Assuming rows is an array of objects containing your data
   } catch (error) {
-    console.error('Error fetching data from database:', error);
-    // Log the error message
-    console.error('Error message:', error.message);
-    return [];
+    console.error('Error fetching posts:', error);
+    throw error;
   }
 }
 
@@ -37,6 +35,7 @@ const port = 3002;
 
 // KK a web server application
 const app = express();
+
 // Assuming you have an Express app instance named 'app'
 app.get('/blog', async (req, res) => {
   try {
@@ -45,9 +44,10 @@ app.get('/blog', async (req, res) => {
 
     // Read content from content.md
     const content = fs.readFileSync('content.md', 'utf8');
-
+    const renderedPosts = renderPosts(posts);
     // Render the content and posts
-    res.send(`${renderPosts(posts)}`);
+    $('main article').innerHTML = renderedPosts;
+    //res.send(`${renderPosts(posts)}`);
   } catch (error) {
     console.error('Error rendering blog page:', error);
     res.status(500).send('Internal server error');

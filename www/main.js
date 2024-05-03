@@ -1,5 +1,4 @@
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-
 // Wrap document.querySelector in a function so we can call it using $
 const $ = cssSelector => document.querySelector(cssSelector);
 
@@ -120,8 +119,6 @@ $('body').innerHTML = /*html*/`
 </footer>
 `;
 
-
-// Define a function to fetch the blog content
 function fetchBlogContent() {
   return fetch('/blog')
     .then(response => response.text())
@@ -135,7 +132,7 @@ function fetchBlogContent() {
 
 // When we click somewhere - check if the click
 // sis on an a tag with an internal link
-$('body').addEventListener('click', e => {
+$('body').addEventListener('click', async e => {
   // Check that we have clicked an a tag
   let aTag = e.target.closest('a');
   if (!aTag) { return; }
