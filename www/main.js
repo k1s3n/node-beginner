@@ -121,35 +121,18 @@ $('body').innerHTML = /*html*/`
 `;
 
 
-//-------------
-// When the DOM is ready
-document.addEventListener('DOMContentLoaded', async () => {
-  // Fetch the blog content if the URL path is '/blog'
-  if (window.location.pathname === '/blog') {
-    await showBlogContent();
-  } else {
-    // If not, show the corresponding view/page
-    showView();
-  }
-});
-//-------------
-
 // Define a function to fetch the blog content
 function fetchBlogContent() {
   return fetch('/blog')
     .then(response => response.text())
     .then(html => {
       $('main article').innerHTML = html;
-      // Set blogContentLoaded to true since the content is successfully loaded
-      blogContentLoaded = true;
     })
     .catch(error => {
       console.error('Error fetching blog content:', error);
     });
 }
 
-
-let blogContentLoaded = false;
 // When we click somewhere - check if the click
 // sis on an a tag with an internal link
 $('body').addEventListener('click', e => {
@@ -179,14 +162,11 @@ $('body').addEventListener('click', e => {
   // Instead change the url without reload
   history.pushState(null, '', href);
   // If the link is to the blog, show the blog content
-  if (href === '/blog' && !blogContentLoaded) {
+  if (href === '/blog') {
     fetchBlogContent();
-    blogContentLoaded = true;
   } else {
     // If not, show the corresponding view/page
     showView();
-    // Set blogContentLoaded to false when navigating to other pages
-    blogContentLoaded = false;
   }
 });
 
