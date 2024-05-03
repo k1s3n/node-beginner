@@ -68,7 +68,7 @@ Odit optio maxime nihil quam ea facere tempore labore cumque eius, porro libero 
 
 # About Me
 
-I'm a passionate software developer with a keen interest in artificial intelligence and machine learning. I love solving complex problems and building innovative solutions that make a difference.
+I'm a passionate software developer with a keen interest in artificial intelligence and machine learning. I love solving complex problems and building innovative solutions that make a difference. d
 
 ## Projects
 
