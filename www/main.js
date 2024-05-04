@@ -167,6 +167,13 @@ $('body').addEventListener('click', async e => {
   }
 });
 
+document.addEventListener('click', function(event) {
+  if (event.target.classList.contains('read-more-text')) {
+    const content = event.target.dataset.content;
+    event.target.previousElementSibling.innerHTML = content;
+    event.target.style.display = 'none';
+  }
+});
 
 // Show a view/"page"
 function showView() {

@@ -28,11 +28,36 @@ li,a{
 
 }
 
+.read-more-text {
+  color: #31607d;
+  cursor: pointer; /* Visa handmarkören när användaren hovrar över texten */
+  background-color: transparent;
+  border-style: none;
+  font-weight: bold;
+}
+.read-more-text:hover {
+  color: #20cff4;
+}
+
 .menu-container,
 .glass-box  {
 max-width: 72%;
 margin: 0 auto;
 box-sizing: border-box;
+}
+
+.post {
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0,0.541);
+}
+.post-content {
+  padding: 10px; /* Justera detta värde efter önskat mellanrum */
 }
 
 main h1,h2,h3{

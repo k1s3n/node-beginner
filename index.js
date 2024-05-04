@@ -5,25 +5,24 @@ import express from 'express';
 import pool from './db.js';
 import fs from 'fs';
 
-async function fetchDataFromDatabase() {
-  try {
-    const connection = await pool.getConnection();
-    const [rows, fields] = await connection.execute('SELECT * FROM posts');
-    connection.release();
-    console.log('Database connection successful');
-    return rows; // Assuming rows is an array of objects containing your data
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-    throw error;
-  }
-}
-
 // Function to render posts as HTML
 function renderPosts(posts) {
+  // Sortera posterna efter högsta ID:et först
+  posts.sort((a, b) => b.id - a.id);
+
   let html = '';
   posts.forEach(post => {
-    html += `<h3>${post.title}</h3>`;
-    html += `<p>${post.content}</p>`;
+    // Klipp innehållet om det är längre än 200 tecken
+    const content = post.content.length > 200 ? post.content.substring(0, 200) + '...' : post.content;
+    
+    html += `<div class="post">`;
+    html += `<h3 class="post-title">${post.title}</h3>`;
+    html += `<p class="post-content">${content}</p>`;
+    // Lägg till knapp för att visa hela innehållet om det klippts
+    if (post.content.length > 200) {
+      html += `<button class="read-more-text" data-content="${post.content}">Read more>></button>`;
+    }
+    html += `</div>`;
   });
   return html;
 }
