@@ -120,6 +120,9 @@ $('body').innerHTML = /*html*/`
 `;
 
 function fetchBlogContent() {
+
+  let navTags = [...document.querySelectorAll('nav a')];
+  navTags.forEach(element => element.classList.remove('active'));
   return fetch('/blog')
     .then(response => response.text())
     .then(html => {

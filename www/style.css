@@ -34,6 +34,7 @@ li,a{
   background-color: transparent;
   border-style: none;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 .read-more-text:hover {
   color: #20cff4;
@@ -263,11 +264,24 @@ footer {
 
 /* mobile styles */
 @media only screen and (max-width: 767px) {
-  .menu-container, .glass-box {
+  .menu-container,.glass-box{
     flex-direction: column;
     align-items: flex-end;
     max-width: 100%;
     margin-top: 0;
+  }
+
+  main article{
+    max-width: 100%;
+  }
+
+
+  .post {
+    max-width: 100x;
+    padding: 0px;
+    box-shadow: none;
+    border-radius: 0px;
+    border-bottom: #2c3e50 1px solid;
   }
 
   footer {

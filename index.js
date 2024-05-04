@@ -10,11 +10,10 @@ function renderPosts(posts) {
   // Sortera posterna efter högsta ID:et först
   posts.sort((a, b) => b.id - a.id);
 
-  let html = '';
+  let html = '<h1>Blog</h1>';
   posts.forEach(post => {
     // Klipp innehållet om det är längre än 200 tecken
     const content = post.content.length > 200 ? post.content.substring(0, 200) + '...' : post.content;
-    
     html += `<div class="post">`;
     html += `<h3 class="post-title">${post.title}</h3>`;
     html += `<p class="post-content">${content}</p>`;
@@ -42,10 +41,8 @@ app.get('/blog', async (req, res) => {
     const connection = await pool.getConnection();
     const [rows, fields] = await connection.execute('SELECT * FROM posts');
     connection.release();
-
     // Render the posts
     const renderedPosts = renderPosts(rows);
-
     // Send the rendered posts as HTML response
     res.send(renderedPosts);
   } catch (error) {
