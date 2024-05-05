@@ -1,5 +1,4 @@
 import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-
 // Wrap document.querySelector in a function so we can call it using $
 const $ = cssSelector => document.querySelector(cssSelector);
 
