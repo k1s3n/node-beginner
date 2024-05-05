@@ -7,7 +7,7 @@ Earum accusantium tenetur laudantium sunt ipsa quaerat quas libero odit, sed pla
 
 ## Test code block
 
-```
+```js
 // Function to fetch data from the database
 async function fetchDataFromDatabase() {
   try {
