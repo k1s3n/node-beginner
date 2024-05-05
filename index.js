@@ -8,14 +8,19 @@ import fs from 'fs';
 // Function to render posts as HTML
 function renderPosts(posts) {
   // Sortera posterna efter högsta ID:et först
-  posts.sort((a, b) => b.id - a.id);
+  posts.sort((a, b) => b.post_id - a.post_id);
 
   let html = '<h1>Blog</h1>';
   posts.forEach(post => {
+    const date = new Date(post.date);
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+    const formattedDate = date.toLocaleDateString('en-US', options);
     // Klipp innehållet om det är längre än 200 tecken
     const content = post.content.length > 200 ? post.content.substring(0, 200) + '...' : post.content;
     html += `<div class="post">`;
     html += `<h3 class="post-title">${post.title}</h3>`;
+    html += `<p>${post.name}</p>`;
+    html += `<p class="post-date">${formattedDate}</p>`;
     html += `<p class="post-content">${content}</p>`;
     // Lägg till knapp för att visa hela innehållet om det klippts
     if (post.content.length > 200) {
