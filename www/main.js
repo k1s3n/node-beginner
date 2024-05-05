@@ -164,6 +164,7 @@ $('body').addEventListener('click', async e => {
   // If the link is to the blog, show the blog content
   if (href === '/blog') {
     fetchBlogContent();
+    aTag.classList.add('active');
   } else {
     // If not, show the corresponding view/page
     showView();
